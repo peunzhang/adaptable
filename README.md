@@ -1,5 +1,5 @@
 # adaptable
-一行代码适配所有的移动端浏览器
+一行代码让你的页面适配所有的移动端浏览器
 <img src="https://raw.githubusercontent.com/peunzhang/adaptable/master/adaptable_demo.gif" width="100%" style="max-width:100%;">
 
 ## 原理
