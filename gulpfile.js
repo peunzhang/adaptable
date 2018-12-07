@@ -24,6 +24,8 @@ let banner = [
 
 gulp.task('js', () => {
 	return gulp.src(jsPath, option)
+        .pipe(header(banner, { pkg : pkg } ))
+        .pipe(gulp.dest(dist))
         .pipe(uglify())
         .pipe(rename(function (path) {
             path.basename += '.min';
