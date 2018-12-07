@@ -1,0 +1,20 @@
+{
+  "name": "adaptable.js",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-header": "^2.0.5",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "less-plugin-autoprefix": "^2.0.0"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "白树",
+  "homepage": "https://github.com/peunzhang/adaptable",
+  "license": "ISC",
+  "version": "0.0.1"
+}
