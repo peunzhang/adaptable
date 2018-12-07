@@ -20,7 +20,7 @@ html{font-size:10px}
 
 ## 原理
 知道上面的原因之后，adaptable的原理是通过动态获取屏幕宽度，通过这个屏幕宽度定义根元素的字体大小，而且去精确计算页面的各个单位。
-<img src="https://raw.githubusercontent.com/peunzhang/adaptable/master/adaptable_demo.gif" width="100%" style="max-width:100%;">
+<img src="https://raw.githubusercontent.com/peunzhang/adaptable/master/show.gif" width="100%" style="max-width:100%;">
 
 ### 示例
 750px宽的视觉稿中有个300px宽度的按钮，那按照比例调整，这个按钮在640px宽的屏幕下的宽度为300/750*640
