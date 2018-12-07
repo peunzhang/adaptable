@@ -19,9 +19,20 @@ html{font-size:10px}
 随着手机设备的类型越来越多，其实很难拿到所有屏幕的宽度，而且这种页面适配的方法在部分分辨率下跟视觉稿的比例是不匹配的 
 
 ## 原理
-知道上面的原因之后，adaptable的原理是通过动态获取屏幕宽度，通过这个屏幕宽度定义根元素的字体大小，而且去精确计算页面的各个单位。
+知道上面的原因之后，adaptable的原理是通过动态获取屏幕宽度，通过这个屏幕宽度定义根元素的字体大小，从而精确适配页面。
 <img src="https://raw.githubusercontent.com/peunzhang/adaptable/master/show.gif" width="100%" style="max-width:100%;">
-
+<pre>
+(function adaptable(window, document){
+  var currentClientWidth; //当前浏览器窗口宽度
+  var rootElement = document.documentElement; //根元素，即html标签
+  function resizeHtmlFontSize(){
+    currentClientWidth = rootElement.clientWidth;
+    rootElement.style.fontSize = currentClientWidth + "px";
+  }
+  document.addEventListener('DOMContentLoaded', resizeHtmlFontSize);
+  window.addEventListener('resize', resizeHtmlFontSize);
+}(window, document))
+</pre>
 ### 示例
 750px宽的视觉稿中有个300px宽度的按钮，那按照比例调整，这个按钮在640px宽的屏幕下的宽度为300/750*640
 直接用less的变量去处理就简单了
